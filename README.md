@@ -1,2 +1,2 @@
 # study_bootstrap
-in militery
+>1. bootstrap 공부용 레포지토리
