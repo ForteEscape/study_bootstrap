@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <!-- 특정 태그에 대하여 조작을 가할 수 있다. -->
+        <div class="container">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>javascript</li>
+            </ul>
+        
+            <script>
+                var lis = document.getElementsByTagName('li');
+                for(var i = 0; i < lis.length; i++){
+                    lis[i].style.color='red';
+                }
+            </script>
+        </div>
+        
+        <!-- 특정 객체 지정시 아래와 같이 한다. 두 스크립트를 동시에 실행시킬 수 없으므로 하나를 주석 처리할것 -->
+        <div class = "container">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>javascript</li>
+            </ul>
+            
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>javascript</li>
+            </ol>
+            
+            <script>
+                var ul = document.getElementsByTagName('ul')[0];
+                var lis = ul.getElementsByTagName('li');
+                for(var i = 0; i < lis.length; i++){
+                    lis[i].style.color='red';
+                }
+            </script>
+        </div>
+        
+    </body>
+</html>

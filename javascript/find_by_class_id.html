@@ -10,6 +10,25 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </head>
     <body>
+        <!-- 클래스로 객체를 찾는 방법 -->
+        <div class = "container">
+            <ul>
+                <li>HTML</li>
+                <li class = "active">CSS</li>
+                <li class = "active">javascript</li>
+            </ul>
+            
+            <script>
+                
+                var lis = document.getElementsByClassName('active');
+                for(var i = 0; i<lis.length; i++){
+                    lis[i].style.color='red';
+                }
+                
+            </script>
+        </div>
+        
+        <!-- id로 객체를 찾는 방법 가장 성능이 좋다 -->
         <div class = "container">
              <ul>
                 <li>HTML</li>
@@ -17,16 +36,10 @@
                 <li class = "active">javascript</li>
             </ul>
             
-            <button type = "button" class = "btn btn-warning" onclick = "red()">
-                RED
-            </button>
-            
             <script>
                 
-                function red(){
-                    var li = document.getElementById('active');
-                    li.style.color = 'red'
-                }
+                var li = document.getElementById('active');
+                li.style.color = 'red'
                 
             </script>
         </div>
