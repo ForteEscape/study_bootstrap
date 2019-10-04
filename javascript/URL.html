@@ -10,23 +10,14 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <input type="button" value="open" onclick="winopen();" />
-        <input type="text" onkeypress="winmessage(this.value)"/>
-        <input type="button" value="close" onclick="winclose()"/>
-        
-        <script>
-            function winopen(){
-                win = window.open('test.html', 'ot', 'width=300px, height=500px');
-            }
-            
-            function winmessage(msg){
-                win.document.getElementById('message').innerText=msg;
-            }
-            
-            function winclose(){
-                win.close();
-            }
-        </script>
+        <div class = "container">
+            <button type="button" class="btn btn-primary" onclick = "Current_URL()">Location</button>
+            <script>
+                function Current_URL(){
+                    alert(location.toString(), location.href);
+                }
+            </script>
+        </div>
         
     </body>
 </html>

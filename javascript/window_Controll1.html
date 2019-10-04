@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <!-- 첫번째 인자는 새 창에 로드할 문서의 URL이다. 인자를 생략하면 이름이 붙지 않은 새 창이 만들어진다 -->
+                <button type="button" class = "btn btn-primary" onclick = "open1()">
+                    window_open1
+                </button>
+            </li>
+            <li>
+                 <!-- 두번째 인자는 새 창의 이름이다. _self는 스크립트가 실행되는 창을 의미한다 -->
+                <button type="button" class = "btn btn-primary" onclick = "open2()">
+                    window_open2
+                </button>
+            </li>
+            <li>
+                 <!-- _blank는 새 창을 의미한다. -->
+                <button type="button" class = "btn btn-primary" onclick = "open3()">
+                    window_open3
+                </button>
+            </li>
+            <li>
+                 <!-- 창에 이름을 붙일 수 있다. open을 재실행 했을 때 동일한 이름의 창이 있다면 그곳으로 문서가 로드된다 -->
+                <button type="button" class = "btn btn-primary" onclick = "open4()">
+                    window_open4
+                </button>
+            </li>
+            <li>
+                 <!-- 세번재 인자는 새 창의 모양과 관련된 속성이 온다. -->
+                <button type="button" class = "btn btn-primary" onclick = "open5()">
+                    window_open5
+                </button>
+            </li>
+        </ul>
+        
+        <script>
+            function open1(){
+                window.open('index.html');
+            }
+            
+            function open2(){
+                window.open('index.html', '_self');
+            }
+            
+            function open3(){
+                window.open('index.html', '_blank');
+            }
+            
+            function open4(){
+                window.open('index.html', 'ot');
+            }
+            
+            function open5(){
+                window.open('index.html', '_blank', 'width=200, height=200, resizeable=no');
+            }
+        </script>
+    </body>
+</html>
