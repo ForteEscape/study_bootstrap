@@ -12,28 +12,48 @@
     <body>
         <select id="selectBox" name="selectBox">
             <option value="" selected="selected">전체</option>
-            <option value="option1">옵션1</option>
-            <option value="option2">옵션2</option>
-            <option value="option3">옵션3</option>
+            <option value="option1">none</option>
+            <option value="english">english</option>
+            <option value="korea">한국어</option>
         </select>
         
-        <div class="layer">내용</div>
+        <div class="layer">
+            <h1>
+                this is English
+            </h1>
+        </div>
+        
+        <div class="layer2">
+            <h1>
+                한국어입니다.
+            </h1>
+        </div>
     </body>
     
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
         <script>
             jQuery('#selectBox').change(function(){
                 var state = jQuery('#selectBox option:selected').val();
-                if(state == 'option2'){
+                if(state == 'english'){
                     jQuery('.layer').show();
+                    
+                    if(jQuery('.layer2').show()){
+                        jQuery('.layer2').hide();
+                    }
+                }
+                else if(state == 'korea'){
+                    jQuery('.layer').hide();
+                    jQuery('.layer2').show();
                 }
                 else{
                     jQuery('.layer').hide();
+                    jQuery('.layer2').hide();
                 }
             });
         </script>
     
     <style>
         .layer {display: none;}
+        .layer2 {display: none;}
     </style>
 </html>
